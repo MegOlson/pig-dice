@@ -10,6 +10,8 @@
   <body>
     <div class="container">
   	  <div class="jumbotron">
+        <img src="img/side3.png" id="headingDice3">
+        <img src="img/side5.png" id="headingDice5">
   	    <h1>Pig Dice Game</h1>
   	  </div>
 
@@ -28,26 +30,32 @@
             </div>
           </div>
           <button type="button" id="play" class="btn">Play!</button>
+          <div id="gif">
+            <img src="img/diceroll.gif" class="gif" alt="gif">
+          </div>
         </form>
       </div>
 
       <div id = "scoreBoard">
-        <h1>ScoreBoard</h1>
-        <div class="rollButton">
-         <button type="button" id="roll" class="btn">Roll</button>
-        </div>
+        <img src="img/side1.png" class="side1">
+        <img src="img/side2.png" class="side2">
+        <img src="img/side3.png" class="side3">
+        <img src="img/side4.png" class="side4">
+        <img src="img/side5.png" class="side5">
+        <img src="img/side6.png" class="side6">
+
         <h3>You Rolled: <span class="dice"></span></h3>
-        <div class="passButton">
-          <button type="button" id="pass" class="btn">Pass</button>
-        </div>
+        <button type="button" id="roll" class="btn">Roll</button><button type="button" id="pass" class="btn">Pass</button>
 
         <div class="row">
           <div class="col-md-6">
+            <img src="img/icon.svg" class="img-circle" alt="Cinque Terre" width="250" height="200">
             <h3><span class="player1"></span>:</h3>
             <p>Current Score:<span class="player1Current"></span></p>
             <p>Total Score:<span class="player1Total"></span></p>
           </div>
           <div class="col-md-6">
+            <img src="img/icon.svg" class="img-circle" alt="Cinque Terre" width="250" height="200">
             <h3><span class="player2"></span>:</h3>
             <p>Current Score:<span class="player2Current"></span></p>
             <p>Total Score:<span class="player2Total"></span></p>
@@ -56,6 +64,7 @@
         <div class="winner well">
           <h1 id="winningMsg"></h1>
           <button type="button" class="btn btn-lg" id="reset">Play Again!</button>
+          <img src="img/fireworks.gif">
         </div>
         <div class="alert" role="alert" id="rollZero">
           <strong>Oh snap!</strong> You rolled a zero, your turn is over!

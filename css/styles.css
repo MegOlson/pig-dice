@@ -7,7 +7,8 @@ button {
   height: 50px;
   width: 80px;
   font-size: 20px;
-  background-color: rgba(255, 255, 255, .2)
+  color: black;
+  background-color: rgba(255, 255, 255, .6)
 }
 p {
   text-align: center;
@@ -15,6 +16,7 @@ p {
 #play {
   margin-left: 45%;
   font-size: 20px;
+  margin-top: 80px;
 }
 #scoreBoard {
   display: none;
@@ -39,12 +41,11 @@ label {
 #rollZero {
   display: none;
 }
-.form-control {
-  width: 220px;
-  margin-left: 25%;
-}
 .form-group {
-  text-align: center;
+  margin-left: 25%;
+  font-size: 35px;
+  width: 220px;
+  height: 40px;
 }
 .btn-lg {
   width: 200px;
@@ -58,10 +59,58 @@ body {
   color: white;
 }
 .alert {
-  color: white;
-  background-color: rgba(255, 255, 255, .2);
+  color: #ef0047;
+  background-color: rgba(255, 255, 255, .5);
   margin-top: 40px;
   height: 80px;
   font-size: 20px;
+  text-align: center;
+}
+.side1 {
+  height: 70px;
+  width: 70px;
+  display: none;
+}
+.side2 {
+  height: 70px;
+  width: 70px;
+  display: none;
+}
+.side3 {
+  height: 70px;
+  width: 70px;
+  display: none;
+}
+.side4 {
+  height: 70px;
+  width: 70px;
+  display: none;
+}
+.side5 {
+  height: 70px;
+  width: 70px;
+  display: none;
+}
+.side6 {
+  height: 70px;
+  width: 70px;
+  display: none;
+}
+#headingDice5 {
+  height: 80px;
+  width: 80px;
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+#headingDice3 {
+  height: 80px;
+  width: 80px;
+  float: left;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+#gif {
+  margin-top: 80px;
   text-align: center;
 }

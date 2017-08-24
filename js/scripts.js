@@ -42,6 +42,49 @@ function Game(player1 ,player2,currentPlayer){
 		}else{
 			currentPlayer.turnScore += diceRead;
 		}
+		if (diceRead === 1) {
+			$(".side1").show();
+			$(".side2").hide();
+			$(".side3").hide();
+			$(".side4").hide();
+			$(".side5").hide();
+			$(".side6").hide();
+		} else if (diceRead === 2) {
+			$(".side2").show();
+			$(".side1").hide();
+			$(".side3").hide();
+			$(".side4").hide();
+			$(".side5").hide();
+			$(".side6").hide();
+		} else if (diceRead === 3) {
+			$(".side3").show();
+			$(".side1").hide();
+			$(".side2").hide();
+			$(".side4").hide();
+			$(".side5").hide();
+			$(".side6").hide();
+		} else if (diceRead === 4) {
+			$(".side4").show();
+			$(".side1").hide();
+			$(".side2").hide();
+			$(".side3").hide();
+			$(".side5").hide();
+			$(".side6").hide();
+		} else if (diceRead === 5) {
+			$(".side5").show();
+			$(".side1").hide();
+			$(".side2").hide();
+			$(".side3").hide();
+			$(".side4").hide();
+			$(".side6").hide();
+		} else {
+			$(".side6").show();
+			$(".side1").hide();
+			$(".side2").hide();
+			$(".side3").hide();
+			$(".side4").hide();
+			$(".side5").hide();
+		}
 		var currentTotalScore = currentPlayer.totalScore + currentPlayer.turnScore;
 		if(currentTotalScore >= winningScore){
 			winningMsg(currentPlayer.playerId);
@@ -82,6 +125,7 @@ $(document).ready(function(){
 
 		$("#roll").click(function(e){
 			e.preventDefault();
+
 			$("#rollZero").hide();
 			game.rollDice();
 			gameDisplay(Player1, Player2);
