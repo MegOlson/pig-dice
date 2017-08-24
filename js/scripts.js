@@ -8,7 +8,8 @@ function gameDisplay(p1, p2){
 	$(".player2Total").text(p2.totalScore);
 }
 function winningMsg(currentplayer){
-		var message = currentplayer + "You win!!"
+		var message = currentplayer + " you are the winner!!"
+		$(".well").toggle();
 		$("#winningMsg").text(message);
 }
 function Player(playerId){
@@ -21,7 +22,7 @@ function Player(playerId){
 	}
 }
 function Game(player1 ,player2,currentPlayer){
-	var winningScore = 10;
+	var winningScore = 15;
 	this.player1 = player1;
 	this.player2 = player2;
 	this.currentPlayer = currentPlayer;
@@ -36,6 +37,7 @@ function Game(player1 ,player2,currentPlayer){
 		 diceRead = Math.floor(6 * Math.random()) + 1;
 		if(diceRead == 1){
 			currentPlayer.turnScore = 0;
+			alert("You rolled a zero, your turn is over!");
 			this.changeTurn();
 		}else{
 			currentPlayer.turnScore += diceRead;

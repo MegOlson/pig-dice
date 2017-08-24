@@ -18,13 +18,13 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="player1-name">Player 1:</label>
-            <input type="text" id="name1" class="form-control" placeholder="Name">
+            <input type="text" id="name1" class="form-control firstName" placeholder="Name">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
             <label for="player2-name">Player 2:</label>
-            <input type="text" id="name2" class="form-control" placeholder="Name">
+            <input type="text" id="name2" class="form-control secondName" placeholder="Name">
           </div>
         </div>
         <button type="button" id="play" class="btn">Play!</button>
@@ -36,24 +36,29 @@
       <div class="rollButton">
        <button type="button" id="roll" class="btn">Roll</button>
       </div>
+      <h3>You Rolled: <span class="dice"></span></h3>
       <div class="passButton">
         <button type="button" id="pass" class="btn">Pass</button>
       </div>
-      <h3>You Rolled:<span class="dice"></span></h3>
 
       <div class="row">
         <div class="col-md-6">
-          <p><span class="player1"></span> Current Score:<span class="player1Current"></span></p>
-          <p><span class="player1"></span> Total Score:<span class="player1Total"></span></p>
+          <h3><span class="player1"></span>:</h3>
+          <p>Current Score:<span class="player1Current"></span></p>
+          <p>Total Score:<span class="player1Total"></span></p>
         </div>
         <div class="col-md-6">
-          <p><span class="player2"></span> Current Score:<span class="player2Current"></span></p>
-          <p><span class="player2"></span> Total Score:<span class="player2Total"></span></p>
+          <h3><span class="player2"></span>:</h3>
+          <p>Current Score:<span class="player2Current"></span></p>
+          <p>Total Score:<span class="player2Total"></span></p>
         </div>
       </div>
-      <div class="winner">
-        <h4 id="winningMsg"></h4>
+      <div class="winner well">
+        <h1 id="winningMsg"></h1>
       </div>
+      <!-- <div class="alert alert-danger" role="alert" id="rollZero">
+        <strong>Oh snap!</strong> You rolled a zero, your turn is over!
+      </div> -->
     </div>
   </body>
 </html>

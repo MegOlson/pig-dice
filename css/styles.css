@@ -4,16 +4,41 @@
 }
 button {
   margin: 10px;
+  height: 50px;
+  width: 80px;
+  font-size: 20px;
 }
 p {
   text-align: center;
 }
 #play {
-  height: 50px;
-  width: 80px;
-  font-size: 20px;
   margin-left: 45%;
+  font-size: 20px;
 }
 #scoreBoard {
   display: none;
+}
+.jumbotron {
+  text-align: center;
+  margin-top: 40px;
+}
+p {
+  font-size: 20px;
+}
+label {
+  font-size: 15px;
+}
+.well {
+  display: none;
+  margin-top: 30px;
+}
+#rollZero {
+  display: none;
+}
+.form-control {
+  width: 220px;
+  margin-left: 25%;
+}
+.form-group {
+  text-align: center;
 }
