@@ -62,6 +62,10 @@ $(document).ready(function(){
 		e.preventDefault();
 		var player1Name = $("input#name1").val();
 		var player2Name = $("input#name2").val();
+		$(".player1").text(player1Name);
+		$(".player2").text(player2Name);
+		$(".name").hide();
+		$("#scoreBoard").toggle();
 	});
 	$("#roll").click(function(e){
 		e.preventDefault();

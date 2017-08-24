@@ -8,3 +8,12 @@ button {
 p {
   text-align: center;
 }
+#play {
+  height: 50px;
+  width: 80px;
+  font-size: 20px;
+  margin-left: 45%;
+}
+#scoreBoard {
+  display: none;
+}
