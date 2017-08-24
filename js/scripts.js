@@ -19,7 +19,6 @@ function Player(playerId){
 		 this.totalScore += this.turnScore;
 		 return this.totalScore;
 	}
-
 }
 function Game(player1 ,player2,currentPlayer){
 	var winningScore = 10;
@@ -59,16 +58,19 @@ $(document).ready(function(){
 	var Player1  = new Player("Player1");
 	var Player2 = new Player("Player2");
 	var game = new Game(Player1,Player2,Player1);
+	$("#play").click(function(e){
+		e.preventDefault();
+		var player1Name = $("input#name1").val();
+		var player2Name = $("input#name2").val();
+	});
 	$("#roll").click(function(e){
 		e.preventDefault();
 		game.rollDice();
 		gameDisplay(Player1, Player2);
-		});
-
+	});
 		$("#pass").click(function(e){
 			e.preventDefault();
 			game.pass();
 			gameDisplay(Player1, Player2);
-			});
-
+		});
 	});
