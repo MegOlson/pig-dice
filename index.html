@@ -12,19 +12,29 @@
   	<div class="jumbotron">
   	<h1>Pig Dice Game</h1>
   	</div>
-  	<div>
-     <button type="button" id="roll">Roll</button> 
-    </div>
-    <div>
-     <button type="button" id="pass">Pass</button> 
-    </div>
     <div id = "scoreBoard">
       <h1>ScoreBoard</h1>
-      <p>You Rolled:<span class="dice"></span></p>
-      <p>player1Current:<span class="player1Current"></span></p>
-      <p>player2Current:<span class="player2Current"></span></p>
-      <p>player1total:<span class="player1Total"></span></p>
-      <p>player2total:<span class="player2Total"></span></p>
+      <div class="rollButton">
+       <button type="button" id="roll">Roll</button>
+      </div>
+      <div class="passButton">
+       <button type="button" id="pass">Pass</button>
+     </div>
+      <h3>You Rolled:<span class="dice"></span></h3>
+    </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Player 1 Current Score:<span class="player1Current"></span></p>
+          <p>Player 1 Total Score:<span class="player1Total"></span></p>
+        </div>
+        <div class="col-md-6">
+          <p>Player 2 Current Score:<span class="player2Current"></span></p>
+          <p>Player Total Score:<span class="player2Total"></span></p>
+        </div>
+      </div>
+      <div class="winner">
+        <h1 id = "winningMsg"></h1>
+      </div>
     </div>
   </div>
   </body>

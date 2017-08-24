@@ -1,4 +1,4 @@
-//Business Logic 
+//Business Logic
 var diceRead;
 function gameDisplay(p1, p2){
 	$(".dice").text(diceRead);
@@ -6,6 +6,10 @@ function gameDisplay(p1, p2){
 	$(".player2Current").text(p2.turnScore);
 	$(".player1Total").text(p1.totalScore);
 	$(".player2Total").text(p2.totalScore);
+}
+function winningMsg(currentplayer){
+		var message = currentplayer + "You win!!"
+		$("#winningMsg").text(message);
 }
 function Player(playerId){
 	this.playerId = playerId;
@@ -22,12 +26,6 @@ function Game(player1 ,player2,currentPlayer){
 	this.player1 = player1;
 	this.player2 = player2;
 	this.currentPlayer = currentPlayer;
-	this.setCurrentPlayer = function(currentPlayer){
-		this.currentPlayer = currentPlayer;
-	}
-	this.getCurrentPlayer = function(){
-		return currentPlayer;
-	}
 	this.changeTurn = function(){
 		if (currentPlayer == player1) {
 			currentPlayer = player2;
@@ -45,7 +43,7 @@ function Game(player1 ,player2,currentPlayer){
 		}
 		var currentTotalScore = currentPlayer.totalScore + currentPlayer.turnScore;
 		if(currentTotalScore >= winningScore){
-			return currentPlayer + "win";
+			winningMsg(currentPlayer.playerId);
 		}
 	}
 	this.pass = function(){
@@ -72,8 +70,5 @@ $(document).ready(function(){
 			game.pass();
 			gameDisplay(Player1, Player2);
 			});
-		
+
 	});
-
-
-
