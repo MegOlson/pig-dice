@@ -57,26 +57,27 @@ function Game(player1 ,player2,currentPlayer){
 
 //User Interface Logic
 $(document).ready(function(){
-	var Player1  = new Player("Player1");
-	var Player2 = new Player("Player2");
-	var game = new Game(Player1,Player2,Player1);
 	$("#play").click(function(e){
 		e.preventDefault();
-		var player1Name = $("input#name1").val();
-		var player2Name = $("input#name2").val();
+		var player1Name =  $("input#name1").val();
+	 	var player2Name =  $("input#name2").val();
 		$(".player1").text(player1Name);
 		$(".player2").text(player2Name);
 		$(".name").hide();
 		$("#scoreBoard").toggle();
-	});
-	$("#roll").click(function(e){
-		e.preventDefault();
-		game.rollDice();
-		gameDisplay(Player1, Player2);
-	});
-		$("#pass").click(function(e){
+		var Player1  = new Player(player1Name);
+		var Player2 = new Player(player2Name);
+		var game = new Game(Player1,Player2,Player1);
+
+		$("#roll").click(function(e){
 			e.preventDefault();
-			game.pass();
+			game.rollDice();
 			gameDisplay(Player1, Player2);
+		});
+			$("#pass").click(function(e){
+				e.preventDefault();
+				game.pass();
+				gameDisplay(Player1, Player2);
+			});
 		});
 	});
