@@ -42,3 +42,6 @@ label {
 .form-group {
   text-align: center;
 }
+.btn-lg {
+  width: 200px;
+}

@@ -37,7 +37,7 @@ function Game(player1 ,player2,currentPlayer){
 		 diceRead = Math.floor(6 * Math.random()) + 1;
 		if(diceRead == 1){
 			currentPlayer.turnScore = 0;
-			alert("You rolled a zero, your turn is over!");
+			$("#rollZero").toggle();
 			this.changeTurn();
 		}else{
 			currentPlayer.turnScore += diceRead;
@@ -51,6 +51,19 @@ function Game(player1 ,player2,currentPlayer){
 		currentPlayer.addTurnScoretoTotalScore();
 		currentPlayer.turnScore = 0;
 		this.changeTurn();
+	}
+	this.reset = function(){
+		diceRead = 0;
+		player1.turnScore = 0;
+		player2.turnScore = 0;
+		player1.totalScore = 0;
+		player2.totalScore = 0;
+		if (currentPlayer === player2) {
+			this.changeTurn();
+		} 
+
+		// currentPlayer.totalScore = 0;
+		$(".well").hide();
 	}
 }
 
@@ -71,12 +84,17 @@ $(document).ready(function(){
 
 		$("#roll").click(function(e){
 			e.preventDefault();
+			$("#rollZero").hide();
 			game.rollDice();
 			gameDisplay(Player1, Player2);
 		});
 			$("#pass").click(function(e){
 				e.preventDefault();
 				game.pass();
+				gameDisplay(Player1, Player2);
+			});
+			$("#reset").click(function(){
+				game.reset();
 				gameDisplay(Player1, Player2);
 			});
 		});
