@@ -60,9 +60,7 @@ function Game(player1 ,player2,currentPlayer){
 		player2.totalScore = 0;
 		if (currentPlayer === player2) {
 			this.changeTurn();
-		} 
-
-		// currentPlayer.totalScore = 0;
+		}
 		$(".well").hide();
 	}
 }

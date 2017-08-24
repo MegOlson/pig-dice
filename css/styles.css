@@ -7,6 +7,7 @@ button {
   height: 50px;
   width: 80px;
   font-size: 20px;
+  background-color: rgba(255, 255, 255, .2)
 }
 p {
   text-align: center;
@@ -21,6 +22,8 @@ p {
 .jumbotron {
   text-align: center;
   margin-top: 40px;
+  background-color: rgba(255, 255, 255, .2);
+  color: white;
 }
 p {
   font-size: 20px;
@@ -31,6 +34,7 @@ label {
 .well {
   display: none;
   margin-top: 30px;
+  background-color: rgba(255, 255, 255, .2)
 }
 #rollZero {
   display: none;
@@ -44,4 +48,20 @@ label {
 }
 .btn-lg {
   width: 200px;
+}
+body {
+  background-image: url("../img/grad.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+.alert {
+  color: white;
+  background-color: rgba(255, 255, 255, .2);
+  margin-top: 40px;
+  height: 80px;
+  font-size: 20px;
+  text-align: center;
 }
